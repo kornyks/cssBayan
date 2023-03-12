@@ -13,7 +13,7 @@
         max-width: 600px;
         margin: 0 auto;
       }
-
+    
       .accordion-header {
         display: block;
         font-size: 20px;
@@ -22,8 +22,9 @@
         cursor: pointer;
         background-color: #eee;
         position: relative;
+        transition: background-color 0.2s ease-in-out; /* added transition */
       }
-
+    
       /* Plus icon for collapsed state */
       .accordion-header::before {
         content: "\f067";
@@ -34,56 +35,66 @@
         top: 50%;
         transform: translateY(-50%);
       }
-
+    
       /* Minus icon for expanded state */
       input[type="checkbox"]:checked + label::before {
         content: "\f068";
       }
-
+    
       .accordion-content {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
       }
-
+    
       input[type="checkbox"]:checked + label + .accordion-content {
         max-height: 1000px; /* adjust to fit your content */
         transition: max-height 0.4s ease-in;
       }
-
+    
+      /* Hover styles */
+      .accordion-header:hover {
+        background-color: #ddd;
+      }
+    
+      /* Active styles */
+      .accordion-header:active {
+        background-color: #ccc;
+      }
+    
       /* Mobile styles */
       @media (max-width: 767px) {
         .accordion {
           max-width: 320px;
         }
-
+    
         .accordion-header {
           font-size: 16px;
         }
       }
-
+    
       /* Tablet styles */
       @media (min-width: 768px) and (max-width: 1199px) {
         .accordion {
           max-width: 820px;
         }
-
+    
         .accordion-header {
           font-size: 20px;
         }
       }
-
+    
       /* Desktop styles */
       @media (min-width: 1200px) {
         .accordion {
           max-width: 1920px;
         }
-
+    
         .accordion-header {
           font-size: 24px;
         }
       }
-    </style>
+    </style>    
   </head>
   <body>
     <div class="accordion">

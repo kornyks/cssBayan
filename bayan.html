@@ -25,33 +25,34 @@
         transition: background-color 0.2s ease-in-out; /* added transition */
       }
     
-      /* Plus icon for collapsed state */
       .accordion-header::before {
-        content: "\f067";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    
-      /* Minus icon for expanded state */
-      input[type="checkbox"]:checked + label::before {
-        content: "\f068";
-      }
-    
-      .accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-      }
-    
-      input[type="checkbox"]:checked + label + .accordion-content {
-        max-height: 1000px; /* adjust to fit your content */
-        transition: max-height 0.4s ease-in;
-      }
-    
+  content: "\f067";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease-out;
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: "\f068";
+  transform: rotate(45deg);
+  transition: transform 0.2s ease-in;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+input[type="checkbox"]:checked + label + .accordion-content {
+  max-height: 1000px; /* adjust to fit your content */
+  transition: max-height 0.4s ease-in;
+}
+
       /* Hover styles */
       .accordion-header:hover {
         background-color: #ddd;

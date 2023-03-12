@@ -25,7 +25,7 @@
         transition: background-color 0.2s ease-in-out; /* added transition */
       }
     
-            .accordion-header::before {
+      .accordion-header::before {
         content: "\f067";
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
@@ -108,53 +108,54 @@
       .accordion-item:active {
         background-color: #ccc;
       }
-            .accordion {
+      .accordion {
         max-width: 600px;
         margin: 0 auto;
         padding: 0 20px; /* added padding */
         box-sizing: border-box; /* added box-sizing */
       }
-      
+        .accordion-header:hover {
+        cursor: pointer;
+      }
     </style>    
   </head>
   <body>
     <div class="accordion">
       <a href="#" class="accordion-item">
-        <input type="checkbox" id="accordion-1" name="accordion[]" hidden>
+        <input type="checkbox" id="accordion-1" name="accordion[]" checked hidden>
         <label class="accordion-header" for="accordion-1">
           <i class="fas fa-chevron-right"></i>
-          Section 1
+        Love
         </label>
         <div class="accordion-content">
-          <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+          <img src="https://images.pexels.com/photos/15760049/pexels-photo-15760049.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load" alt="Placeholder Image">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel nulla ac elit suscipit semper.</p>
         </div>
       </a>
       
       <a href="#" class="accordion-item">
-        <input type="checkbox" id="accordion-2" name="accordion[]" hidden>
+        <input type="checkbox" id="accordion-2" name="accordion[]" checked hidden>
         <label class="accordion-header" for="accordion-2">
           <i class="fas fa-chevron-right"></i>
-          Section 2
+          Jab
         </label>
         <div class="accordion-content">
-          <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+          <img src="https://images.pexels.com/photos/6236640/pexels-photo-6236640.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load" alt="Placeholder Image">
           <p>Nulla eget magna auctor, efficitur nisl vel, euismod mauris.</p>
         </div>
       </a>
       
       <a href="#" class="accordion-item">
-        <input type="checkbox" id="accordion-3" name="accordion[]" hidden>
+        <input type="checkbox" id="accordion-3" name="accordion[]" checked hidden>
         <label class="accordion-header" for="accordion-3">
           <i class="fas fa-chevron-right"></i>
-          Section 3
+          Home
         </label>
         <div class="accordion-content">
-          <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+          <img src="https://images.pexels.com/photos/4100769/pexels-photo-4100769.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load" alt="Placeholder Image">
           <p>Suspendisse potenti. Sed vehicula dolor ac sapien dictum convallis.</p>
         </div>
       </a>
     </div>
-    
 </body>
 </html>

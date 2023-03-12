@@ -1,166 +1,58 @@
-/* Default styles */
+      /* Default styles */
+      .accordion {
+        max-width: 600px;
+        margin: 0 auto;
+      }
 
-.accordion {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  overflow: hidden;
-}
+      .accordion-header {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #eee;
+      }
 
-.accordion-item {
-  border-bottom: 1px solid #ccc;
-}
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
 
-.accordion-header {
-  background-color: #eee;
-  padding: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  transition: background-color 0.2s ease;
-}
+      input[type="checkbox"]:checked + label + .accordion-content {
+        max-height: 1000px; /* adjust to fit your content */
+        transition: max-height 0.4s ease-in;
+      }
 
-.accordion-image {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  border-radius: 50%;
-  transition: transform 0.2s ease;
-}
+      /* Mobile styles */
+      @media (max-width: 767px) {
+        .accordion {
+          max-width: 320px;
+        }
 
-.accordion-title {
-  margin: 0;
-  transition: color 0.2s ease;
-}
+        .accordion-header {
+          font-size: 16px;
+        }
+      }
 
-.accordion-icon {
-  margin-left: auto;
-  font-size: 20px;
-  transition: transform 0.2s ease;
-}
+      /* Tablet styles */
+      @media (min-width: 768px) and (max-width: 1199px) {
+        .accordion {
+          max-width: 820px;
+        }
 
-.accordion-header:hover {
-  background-color: #ddd;
-}
+        .accordion-header {
+          font-size: 20px;
+        }
+      }
 
-.accordion-header:active {
-  background-color: #ccc;
-}
+      /* Desktop styles */
+      @media (min-width: 1200px) {
+        .accordion {
+          max-width: 1920px;
+        }
 
-.accordion-image:hover {
-  transform: scale(1.1);
-}
-
-.accordion-image:active {
-  transform: scale(0.9);
-}
-
-.accordion-title:hover {
-  color: #666;
-}
-
-.accordion-title:active {
-  color: #333;
-}
-
-.accordion-icon:hover {
-  transform: rotate(180deg);
-}
-
-.accordion-icon:active {
-  transform: scale(0.9);
-}
-
-.accordion-content {
-  padding: 10px;
-  display: none;
-}
-
-/* Apply styles to the content when it is the target */
-.accordion-content:target {
-  display: block;
-}
-
-.accordion-item.active .accordion-content {
-  display: block;
-}
-
-/* Icons for expanded and collapsed states */
-
-.accordion-icon.collapsed:before {
-  content: "\f067";
-  font-family: "FontAwesome";
-}
-
-.accordion-icon.expanded:before {
-  content: "\f068";
-  font-family: "FontAwesome";
-}
-
-/* Mobile styles */
-
-@media (max-width: 320px) {
-
-  .accordion-image {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-  }
-
-  .accordion-title {
-    font-size: 16px;
-  }
-
-  .accordion-icon {
-    font-size: 16px;
-  }
-
-}
-
-/* Tablet styles */
-
-@media (min-width: 321px) and (max-width: 820px) {
-
-  .accordion-image {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-  }
-
-  .accordion-title {
-    font-size: 20px;
-  }
-
-  .accordion-icon {
-    font-size: 20px;
-  }
-
-}
-
-/* Desktop styles */
-
-@media (min-width: 821px) {
-
-  .accordion-image {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-
-  .accordion-title {
-    font-size: 24px;
-  }
-
-  .accordion-icon {
-    font-size: 24px;
-  }
-
-}
-.accordion-content {
-  padding: 10px;
-  display: none;
-}
-
-.accordion-content:target {
-  display: block;
-}
-
+        .accordion-header {
+          font-size: 24px;
+        }
+      }

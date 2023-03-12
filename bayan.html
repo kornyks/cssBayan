@@ -1,21 +1,99 @@
-	<!DOCTYPE html>
-	<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="bayanAnimation.css">
-		<title>Bayan</title>
-	</head>
-	<body>
-<div class="accordion">
-  <input type="checkbox" id="accordion-1" name="accordion[]" hidden>
-  <label class="accordion-header" for="accordion-1">Section 1</label>
-  <div class="accordion-content">
-    <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel nulla ac elit suscipit semper.</p>
-  </div>
-  
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayan</title>
+    <!-- Add FontAwesome stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      /* Default styles */
+      .accordion {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .accordion-header {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px 10px 10px 30px;
+        cursor: pointer;
+        background-color: #eee;
+        position: relative;
+      }
+
+      /* Plus icon for collapsed state */
+      .accordion-header::before {
+        content: "\f067";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      /* Minus icon for expanded state */
+      input[type="checkbox"]:checked + label::before {
+        content: "\f068";
+      }
+
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+
+      input[type="checkbox"]:checked + label + .accordion-content {
+        max-height: 1000px; /* adjust to fit your content */
+        transition: max-height 0.4s ease-in;
+      }
+
+      /* Mobile styles */
+      @media (max-width: 767px) {
+        .accordion {
+          max-width: 320px;
+        }
+
+        .accordion-header {
+          font-size: 16px;
+        }
+      }
+
+      /* Tablet styles */
+      @media (min-width: 768px) and (max-width: 1199px) {
+        .accordion {
+          max-width: 820px;
+        }
+
+        .accordion-header {
+          font-size: 20px;
+        }
+      }
+
+      /* Desktop styles */
+      @media (min-width: 1200px) {
+        .accordion {
+          max-width: 1920px;
+        }
+
+        .accordion-header {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordion">
+      <input type="checkbox" id="accordion-1" name="accordion[]" hidden>
+      <label class="accordion-header" for="accordion-1">Section 1</label>
+      <div class="accordion-content">
+        <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel nulla ac elit suscipit semper.</p>
+      </div>
+
   <input type="checkbox" id="accordion-2" name="accordion[]" hidden>
   <label class="accordion-header" for="accordion-2">Section 2</label>
   <div class="accordion-content">
@@ -30,6 +108,5 @@
     <p>Suspendisse potenti. Sed vehicula dolor ac sapien dictum convallis.</p>
   </div>
 </div>
-
 </body>
 </html>

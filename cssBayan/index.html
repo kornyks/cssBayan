@@ -26,16 +26,15 @@
       }
     
       .accordion-header::before {
-        content: "\f067";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: transform 0.2s ease-out;
-      }
-
+          content: "\f067";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          position: absolute;
+          right: 10px;
+          transform: translateY(-50%) none;
+          transition: transform 0.2s ease-out;
+        }
+        
       input[type="checkbox"]:checked + label::before {
         content: "\f068";
         transform: rotate(45deg);
@@ -95,7 +94,7 @@
           font-size: 24px;
         }
       }
-            .accordion-item {
+      .accordion-item {
         display: block;
         text-decoration: none;
         color: inherit;
@@ -114,7 +113,7 @@
         padding: 0 20px; /* added padding */
         box-sizing: border-box; /* added box-sizing */
       }
-        .accordion-header:hover {
+      .accordion-header:hover {
         cursor: pointer;
       }
     </style>    
@@ -124,23 +123,21 @@
       <a href="#" class="accordion-item">
         <input type="checkbox" id="accordion-1" name="accordion[]" checked hidden>
         <label class="accordion-header" for="accordion-1">
-          <i class="fas fa-chevron-right"></i>
         Love
         </label>
         <div class="accordion-content">
-          <img src="https://images.pexels.com/photos/15760049/pexels-photo-15760049.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load" alt="Placeholder Image">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel nulla ac elit suscipit semper.</p>
+          <img src="https://i.pinimg.com/564x/8e/ec/a4/8eeca4bcd45946817c0c4a95ec6ad6ae.jpg" alt="Placeholder Image">
+          <p>Nulla eget magna auctor, efficitur nisl vel, euismod mauris.</p>
         </div>
       </a>
       
       <a href="#" class="accordion-item">
         <input type="checkbox" id="accordion-2" name="accordion[]" checked hidden>
         <label class="accordion-header" for="accordion-2">
-          <i class="fas fa-chevron-right"></i>
           Jab
         </label>
         <div class="accordion-content">
-          <img src="https://images.pexels.com/photos/6236640/pexels-photo-6236640.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load" alt="Placeholder Image">
+          <img src="https://i.pinimg.com/564x/9e/6b/9f/9e6b9f5d0c05efeaca7c40f2a40ff98c.jpg" alt="Placeholder Image">
           <p>Nulla eget magna auctor, efficitur nisl vel, euismod mauris.</p>
         </div>
       </a>
@@ -148,11 +145,10 @@
       <a href="#" class="accordion-item">
         <input type="checkbox" id="accordion-3" name="accordion[]" checked hidden>
         <label class="accordion-header" for="accordion-3">
-          <i class="fas fa-chevron-right"></i>
           Home
         </label>
         <div class="accordion-content">
-          <img src="https://images.pexels.com/photos/4100769/pexels-photo-4100769.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load" alt="Placeholder Image">
+          <img src="https://i.pinimg.com/564x/75/aa/cb/75aacbbb7529932b55118680bb33a50c.jpg" alt="Placeholder Image">
           <p>Suspendisse potenti. Sed vehicula dolor ac sapien dictum convallis.</p>
         </div>
       </a>
